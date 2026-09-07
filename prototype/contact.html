@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>contact | Wei Liang</title>
+    <meta name="description" content="Get in touch with Wei Liang" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:100,300,400,500,700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.2.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/academicons@1.9.5/css/academicons.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/al-folio.css" />
+    <script src="assets/js/al-folio.js"></script>
+  </head>
+
+  <body>
+    <nav class="navbar" aria-label="Main">
+      <div class="navbar-inner">
+        <a class="navbar-brand" href="index.html">
+          <span class="font-weight-bold">Wei</span> Liang
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          aria-controls="navbar-collapse"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+        <div class="navbar-collapse" id="navbar-collapse">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="index.html">about</a></li>
+            <li class="nav-item"><a class="nav-link" href="publications.html">publications</a></li>
+            <li class="nav-item"><a class="nav-link" href="projects.html">projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="teaching.html">teaching</a></li>
+            <li class="nav-item"><a class="nav-link" href="cv.html">cv</a></li>
+            <li class="nav-item active"><a class="nav-link" href="contact.html">contact</a></li>
+            <li class="nav-item">
+              <button class="theme-toggle" id="theme-toggle" type="button" title="Change theme">
+                <i class="fa-solid fa-circle-half-stroke" aria-hidden="true"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="container">
+        <article class="post">
+          <header class="header-bar">
+            <h1 class="post-title">contact</h1>
+            <p class="post-description">
+              Happy to hear about collaborations, talks, student enquiries, or questions about the
+              work.
+            </p>
+          </header>
+
+          <div class="contact-methods">
+            <div class="contact-method">
+              <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              <div>
+                <div class="label">Email</div>
+                <div class="value">
+                  <a href="mailto:wliang@nus.edu.sg">wliang@nus.edu.sg</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+              <div>
+                <div class="label">LinkedIn</div>
+                <div class="value">
+                  <a href="https://www.linkedin.com/in/wadeliang/" target="_blank" rel="noopener"
+                    >in/wadeliang</a
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-method">
+              <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+              <div>
+                <div class="label">Office</div>
+                <div class="value">
+                  IDEAS Lab, College of Design and Engineering<br />
+                  National University of Singapore<br />
+                  8 Architecture Dr, #03-02<br />
+                  Singapore 117564
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h2 class="section-title">send a message</h2>
+
+          <!--
+            Submissions POST as JSON to Web3Forms, which emails them to the
+            address registered against the access key below. The access key is
+            a public, client-side identifier by design (not a secret).
+            data-email is the fallback address used if the request fails.
+          -->
+          <form
+            class="contact-form"
+            id="contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST"
+            data-endpoint="https://api.web3forms.com/submit"
+            data-email="wliang@nus.edu.sg"
+            novalidate
+          >
+            <input
+              type="hidden"
+              name="access_key"
+              value="fe45c3f7-bc7c-40ea-884b-391dd1bea233"
+            />
+            <input type="hidden" name="from_name" value="Website contact form" />
+
+            <div class="form-row">
+              <label for="cf-name">Your name <span class="req">*</span></label>
+              <input
+                class="form-control"
+                type="text"
+                id="cf-name"
+                name="name"
+                autocomplete="name"
+                data-required
+              />
+              <div class="form-error">Please tell me your name.</div>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-email">Your email <span class="req">*</span></label>
+              <input
+                class="form-control"
+                type="email"
+                id="cf-email"
+                name="email"
+                autocomplete="email"
+                data-required
+              />
+              <div class="form-error">Please enter a valid email address so I can reply.</div>
+            </div>
+
+            <div class="form-row">
+              <label for="cf-subject">Subject</label>
+              <input class="form-control" type="text" id="cf-subject" name="subject" />
+            </div>
+
+            <div class="form-row">
+              <label for="cf-message">Message <span class="req">*</span></label>
+              <textarea class="form-control" id="cf-message" name="message" data-required></textarea>
+              <div class="form-error">Please write a message.</div>
+            </div>
+
+            <!-- Spam trap, hidden from people via CSS. -->
+            <div class="honeypot" aria-hidden="true">
+              <label for="cf-company">Company (leave blank)</label>
+              <input type="text" id="cf-company" name="company" tabindex="-1" autocomplete="off" />
+            </div>
+
+            <button class="btn-submit" type="submit">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> Send message
+            </button>
+
+            <div class="form-status" id="form-status" role="status" aria-live="polite"></div>
+          </form>
+
+          <div class="callout">
+            <strong>Prototype note:</strong> messages are delivered by
+            <a href="https://web3forms.com/" target="_blank" rel="noopener">Web3Forms</a> to the
+            address registered against your access key &mdash; confirm that's the inbox you want.
+            The access key is meant to live in public HTML, so it being visible here is by design,
+            but it does mean anyone can post to it; Web3Forms' own spam filtering plus the hidden
+            honeypot field on this form are what hold that down. If you start seeing junk, turn on
+            reCAPTCHA in the Web3Forms dashboard and I'll add it here.
+          </div>
+
+          <!-- --------------------------- visitor map --------------------------- -->
+          <div class="visitor-map">
+            <h2 class="section-title">visitors</h2>
+            <div class="map-frame">
+              <div class="map-inner">
+                <script
+                  type="text/javascript"
+                  id="mapmyvisitors"
+                  src="https://mapmyvisitors.com/map.js?d=HftoC1KfmilT8yrHY-VLwVX_Vy9frtJaS8-3jaZu5gI&amp;cl=ffffff&amp;w=a"
+                ></script>
+              </div>
+            </div>
+            <p class="map-caption">
+              Visitor map powered by
+              <a href="https://mapmyvisitors.com/web/1c827" target="_blank" rel="noopener"
+                >MapMyVisitors</a
+              >.
+            </p>
+          </div>
+        </article>
+      </div>
+    </main>
+
+    <button id="back-to-top" type="button" aria-label="Back to top">
+      <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <footer class="site-footer">
+      &copy; Copyright 2026 Wei Liang. Powered by
+      <a href="https://jekyllrb.com/" target="_blank" rel="noopener">Jekyll</a> with the
+      <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener">al-folio</a>
+      theme. Hosted by
+      <a href="https://pages.github.com/" target="_blank" rel="noopener">GitHub Pages</a>.
+    </footer>
+  </body>
+</html>
