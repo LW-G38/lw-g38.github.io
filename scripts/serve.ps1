@@ -1,4 +1,4 @@
-# Minimal static file server for previewing the al-folio prototype.
+# Minimal static file server for previewing the site locally.
 # Uses TcpListener (no admin / URL-ACL needed, unlike HttpListener).
 param(
     [int]$Port = 8123,
@@ -75,7 +75,7 @@ while ($true) {
         $urlPath = $parts[1]
         $urlPath = ($urlPath -split "\?")[0]
         $urlPath = [System.Uri]::UnescapeDataString($urlPath)
-        if ($urlPath -eq "/") { $urlPath = "/prototype/index.html" }
+        if ($urlPath -eq "/") { $urlPath = "/index.html" }
         $relative = $urlPath.TrimStart("/") -replace "/", "\"
 
         $candidate = Join-Path $rootFull $relative

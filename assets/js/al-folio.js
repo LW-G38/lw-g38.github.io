@@ -1,4 +1,4 @@
-/* al-folio prototype behaviour: theme cycling, mobile nav, back-to-top, abstract toggles. */
+/* Site behaviour: theme cycling, mobile nav, back-to-top, abstract toggles. */
 (function () {
   "use strict";
 
